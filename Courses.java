@@ -21,11 +21,28 @@ public class Courses {
     	   if(!this.enrolledStudents.contains(Student)) {
     		   enrolledStudents.add(Student);
     		   System.out.println(Student.firstName + " " + Student.lastName +
-    				   "enrolled in" + courseName);
+    				   " enrolled in " + courseName + ", Profesor= "+ professorName +
+    				   ", año= " + year);
     	   }else {
     		   System.out.println(Student.firstName + " " + Student.lastName +
     				   " is already enrolled.");
     	   }
+       
+       }
+       
+       public void enroll(Student[] Students){
+    	      //TODO add all the students to the collection
+    	for(Student Student:Students) {
+    		   if(!this.enrolledStudents.contains(Student)) {
+        		   enrolledStudents.add(Student);
+        		   System.out.println(Student.firstName + " " + Student.lastName +
+        				   " enrolled in " + courseName + ", Profesor= "+ professorName +
+        				   ", año= " + year);
+        	   }else {
+        		   System.out.println(Student.firstName + " " + Student.lastName +
+        				   "  is already enrolled.");
+        	   }
+    	}
        
        }
 
@@ -36,7 +53,8 @@ public class Courses {
         	   if(this.enrolledStudents.contains(Student)) {
         		   enrolledStudents.remove(Student);
         		   System.out.println(Student.firstName + " " + Student.lastName +
-        				   "unenrolled for" + courseName);
+        				   " unenrolled for " + courseName + ", Profesor= "+ professorName +
+        				   ", año= " + year);
         	   }else {
         		   System.out.println(Student.firstName + " " + Student.lastName +
         				   " is not enrolled");
@@ -60,7 +78,7 @@ public class Courses {
     		   return max ;
     	   }
 
-
+    	   
 
 
 
